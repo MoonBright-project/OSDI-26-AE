@@ -96,7 +96,7 @@ PageMold must be linked against the modified GPU driver path described above. Bu
 
 Each claim below corresponds to a paper section and a set of AE scripts. Commands should be run from the relevant repository root unless the repository-specific README states otherwise.
 
-### C1 — Primitive Efficiency of PageMold VMM APIs (§4.2)
+### 1 — Primitive Efficiency of PageMold VMM APIs
 
 **Goal.** Measure the latency and scalability of PageMold's virtual-memory primitives against CUDA VMM.
 
@@ -108,7 +108,7 @@ bash ae/scripts/pure_malloc.sh     # cudaMalloc vs. PageMold, 2 MB to 2 GB
 
 ---
 
-### C2 — Generality Across GPGPU Workloads (§4.3)
+### 2 — Generality Across GPGPU Workloads
 
 **Goal.** Evaluate PageMold across a broad benchmark suite covering CUDA Samples, ROCm Samples, and HeCBench.
 
@@ -124,7 +124,7 @@ bash ae/scripts/malloc_overall.sh  # NVIDIA and AMD allocation-latency sweep
 
 ---
 
-### C3 — Defragmentation for Deep-Learning Training (§4.4)
+### 3 — Defragmentation for Deep-Learning Training
 
 **Goal.** Evaluate whether PageMold improves GPU memory efficiency and enables larger trainable batch sizes under realistic training workloads.
 
@@ -137,7 +137,7 @@ bash ae/scripts/train_mem_eff.sh
 
 ---
 
-### C4 — Low-Latency LLM Inference (§4.5)
+### 4 — Low-Latency LLM Inference
 
 **Goal.** Evaluate PageMold's impact on long-context prefill, prefix caching, and beam-search inference.
 
